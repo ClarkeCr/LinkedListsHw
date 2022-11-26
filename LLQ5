@@ -1,0 +1,16 @@
+//removes first instance of key from the list
+void CharacterList::remove(char key) {
+Node *temp = head;
+Node *templ = head;
+while (temp->next != nullptr){
+    if (temp->key == key){
+        templ->next = temp->next;
+        break;
+    }
+    templ = temp;
+    temp = temp->next;
+}
+    if (temp->next == nullptr){
+        templ->next = nullptr;
+    }
+}
