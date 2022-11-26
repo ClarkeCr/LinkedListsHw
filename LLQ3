@@ -1,0 +1,14 @@
+//adds key in the list after search_key; if search_key isn't found, nothing is added
+void CharacterList::add_after(char key, char search_key) {
+    Node *temp = head;
+    Node *newN = new Node;
+    newN->key = key;
+    if (temp == nullptr){
+        return;
+    }
+    while (temp->key != search_key){
+        temp = temp->next;
+    }
+    newN->next = temp->next;
+    temp->next = newN;
+}
