@@ -1,0 +1,17 @@
+//adds key to the back of the list
+void CharacterList::add_back(char key) {
+    Node *newN = new Node;
+    newN->key = key;
+    newN->next = nullptr;
+    Node *temp = head;
+    if (temp == nullptr) {
+        add_front(key);
+    } else {
+        while (temp->next != nullptr) {
+
+            //make the pointer "head" the pointer next
+            temp = temp->next;
+        }
+        temp->next = newN;
+    }
+}
