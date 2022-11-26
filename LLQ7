@@ -1,0 +1,10 @@
+//returns key from back of list
+char CharacterList::back() {
+    Node *temp = head;
+    while (temp->next != nullptr) {
+
+        //make the pointer "head" the pointer next
+        temp = temp->next;
+    }
+    return temp->key;
+}
