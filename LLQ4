@@ -1,0 +1,10 @@
+//removes key from the back of the list
+void CharacterList::remove_back() {
+    Node *temp = head;
+    char removed = back();
+    int size2 = size()-1;
+    for (int i = 0; i < size2-1; i++) {
+        temp = temp->next;
+    }
+    temp->next = nullptr;
+}
